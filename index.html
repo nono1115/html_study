@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>簡単なHTMLページ</title>
+        <style>
+            body {
+                background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilpuo4kHQKx_x8b4Ydj0VF_UTahFVnm78Ds9m1ZeH-yjLmg3J2lrvkFNM-oM4P-6qvsEmr-xHxxgEEc78F9SUIEG2u_cNZEDfzOt5EbzwWjlEJsLSrkMlURPEDaH49jNgV73M5IxEil4pv/s1600/bg_natural_flower.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                position: relative;
+            }
+            .small_img {
+                position: absolute;
+                top: 10px;
+                left: 500px;
+                width: 150px;
+                transition: top 1s, left 1s;
+            }
+            .large_img {
+                position: absolute;
+                top: 50px; 
+                left: 50px;
+                width: 400px;
+                transition: top 1s, left 1s;
+            }
+            
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script>
+            $(function(e) {
+                $('.large_img').on('mouseover', function(e){
+                    $(e.target).css({left: 400 * Math.random(), top: 400 * Math.random()});
+                });
+                $('.small_img').on('mouseover', function(e){
+                    $(e.target).css({left: 400 * Math.random(), top: 400 * Math.random()});
+                });            
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello,world!</h1>
+        <p>これは、最も基本的なHTMLファイルの例です。</p>
+        <img src="apng.png" class="small_img"/>
+        <img src="apng.png" class="small_img"/>
+        <img src="apng.png" class="small_img"/>
+        <img src="apng.png" class="large_img"/>
+    </body>
+</html>
+
